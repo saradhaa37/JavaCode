@@ -1,0 +1,22 @@
+class Solution {
+    public int strStr(String haystack, String needle) {
+        char[] charhaystack=haystack.toCharArray();
+        char[] charneedle=needle.toCharArray();
+        for(int i=0;i<charhaystack.length;i++)
+        {
+            if(charhaystack[i]==charneedle[0])
+            {
+                System.out.println(charhaystack[i]);
+                int j;
+                for(j=1;j<needle.length() && i+j<charhaystack.length;j++)
+                {
+                    if(!(charhaystack[i+j]==charneedle[j]))
+                        break;
+                }
+                if(j==charneedle.length)
+                    return i;
+            }
+        }
+        return -1;
+    }
+}
