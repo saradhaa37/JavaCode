@@ -1,0 +1,18 @@
+package Practice;
+
+public class ReverseString {
+	public static void main(String[] args)
+	{
+		System.out.println("Enter the string");
+		String inputStr=System.console().readLine();
+		String[] splitInp=inputStr.split("");
+		int strLen=splitInp.length-1;
+		String revString = splitInp[strLen];
+		for(int i=strLen-1;i>=0;i--)
+		{
+			revString=revString.concat(splitInp[i]);
+		}
+		System.out.println(revString);
+	}
+
+}
