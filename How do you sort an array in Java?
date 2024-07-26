@@ -1,0 +1,32 @@
+package Practice;
+
+import java.util.Arrays;
+
+public class SortArray {
+	
+	
+	public int[] sortArray(int[] arrEle)
+	{
+		int temp;
+		for(int i=0;i<arrEle.length;i++)
+			for(int j=i;j<arrEle.length;j++)
+			{
+				if(arrEle[i]>arrEle[j])
+				{
+					temp=arrEle[i];
+					arrEle[i]=arrEle[j];
+					arrEle[j]=temp;
+				}
+			}
+		return arrEle;
+	}
+	public static void main(String[] args)
+	{
+		int[] arrEle= {10,8,2,11};
+		int[] finalEle;
+		SortArray objsortArr=new SortArray();
+		finalEle=objsortArr.sortArray(arrEle);
+		System.out.print(Arrays.toString(finalEle));
+	}
+
+}
